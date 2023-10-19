@@ -4,6 +4,10 @@ on:
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
     inputs:
+      branch: 
+        type: string
+        description: Bumping version from branch (main or release/**)
+        default: main
       bump_version_mode: 
         type: choice
         description: Bumping version to
@@ -17,6 +21,7 @@ jobs:
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-alpha-package-workflow.yml@main
     with:
       repository: ${{ github.repository }}
+      branch: ${{ github.event.inputs.branch }}
       bump_version_mode: ${{ github.event.inputs.bump_version_mode }}
     secrets:
       token: ${{ secrets.GHE_DEVOPS_TOKEN }}
