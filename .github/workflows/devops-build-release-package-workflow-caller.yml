@@ -2,11 +2,8 @@ name: devops-build-release-package-workflow-caller
 
 on:
   pull_request:
-    types: [ closed ]
+    types: [ opened ] #[ closed ]
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Action tab
-  workflow_dispatch: # TODO: Remove
 
 jobs:
   call-devops-workflow:
