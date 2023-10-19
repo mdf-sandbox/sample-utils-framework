@@ -21,8 +21,8 @@ jobs:
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-alpha-package-workflow.yml@main
     with:
       repository: ${{ github.repository }}
-      branch: ${{ github.event.inputs.branch }}
-      bump_version_mode: ${{ github.event.inputs.bump_version_mode }}
+      branch: ${{ inputs.branch }}
+      bump_version_mode: ${{ inputs.bump_version_mode }}
     secrets: inherit
     permissions:
       contents: write
