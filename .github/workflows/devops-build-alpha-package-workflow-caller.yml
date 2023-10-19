@@ -23,7 +23,6 @@ jobs:
       repository: ${{ github.repository }}
       branch: ${{ github.event.inputs.branch }}
       bump_version_mode: ${{ github.event.inputs.bump_version_mode }}
-    secrets:
-      token: ${{ secrets.GHE_DEVOPS_TOKEN }}
+    secrets: inherit
     permissions:
       contents: write
