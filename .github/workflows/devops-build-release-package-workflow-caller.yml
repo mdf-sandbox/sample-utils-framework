@@ -1,4 +1,4 @@
-name: devops-build-workflow-caller
+name: devops-build-release-package-workflow-caller
 
 on:
   pull_request:
