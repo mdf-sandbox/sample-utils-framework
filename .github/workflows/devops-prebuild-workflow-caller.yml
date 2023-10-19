@@ -14,8 +14,7 @@ jobs:
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-prebuild-workflow.yml@main
     with:
       repository: ${{ github.repository }}
-    secrets:
-      token: ${{ secrets.GHE_DEVOPS_TOKEN }}
+    secrets: inherit
     permissions:
       actions: read
       contents: read
