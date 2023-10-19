@@ -9,8 +9,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-devops-build-workflow:
-    name: Run Build Job from Workflow Caller
+  call-devops-workflow:
+    name: Call DevOps Workflow
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-workflow.yml@main
     with:
       repository: ${{ github.repository }}

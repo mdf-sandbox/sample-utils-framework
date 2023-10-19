@@ -1,12 +1,15 @@
-name: devops-prebuild-workflow-caller
+name: devops-build-alpha-package-workflow-caller
 
 on:
-  pull_request:
-    types: [ opened ]
-    branches: [ main ]
-    
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
+    inputs:
+      bump_version_mode: 
+        type: choice
+        description: Bumping version to
+        options:
+        - premajor
+        - preminor
 
 jobs:
   call-devops-workflow:
@@ -14,9 +17,6 @@ jobs:
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-prebuild-workflow.yml@main
     with:
       repository: ${{ github.repository }}
+      bump_version_mode: ${{ github.event.inputs.bump_version_mode }}
     secrets:
       token: ${{ secrets.GHE_DEVOPS_TOKEN }}
-    permissions:
-      actions: read
-      contents: read
-      security-events: write
