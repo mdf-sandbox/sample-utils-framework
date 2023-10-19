@@ -10,6 +10,8 @@ on:
 
 jobs:
   call-devops-build-workflow:
+    runs-on: ubuntu-20.04
+	
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-workflow.yml@main
     with:
       repository: ${{ github.event.repository.name }}
