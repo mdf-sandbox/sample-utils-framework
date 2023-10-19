@@ -1,8 +1,8 @@
-name: devops-build-workflow-caller
+name: devops-prebuild-workflow-caller
 
 on:
   pull_request:
-    types: [ closed ]
+    types: [ opened ]
     branches: [ main ]
     
   # Allows you to run this workflow manually from the Action tab
@@ -10,8 +10,8 @@ on:
 
 jobs:
   call-devops-build-workflow:
-    name: Run Build Job from Workflow Caller
-    uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-workflow.yml@main
+    name: Run Pre-Build Job from Workflow Caller
+    uses: mdf-sandbox/sample-devops/.github/workflows/devops-prebuild-workflow.yml@main
     with:
       repository: ${{ github.repository }}
     secrets:
