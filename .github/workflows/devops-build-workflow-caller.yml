@@ -1,9 +1,9 @@
 name: devops-build-workflow-caller
 
 on:
-  pull_request:
-    types: [ closed ]
-    branches: [ main ]
+  #pull_request:
+  #  types: [ closed ]
+  #  branches: [ main ]
     
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
