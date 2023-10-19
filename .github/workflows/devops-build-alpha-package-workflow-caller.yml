@@ -14,7 +14,7 @@ on:
 jobs:
   call-devops-workflow:
     name: Call DevOps Workflow
-    uses: mdf-sandbox/sample-devops/.github/workflows/devops-prebuild-workflow.yml@main
+    uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-alpha-package-workflow.yml@main
     with:
       repository: ${{ github.repository }}
       bump_version_mode: ${{ github.event.inputs.bump_version_mode }}
