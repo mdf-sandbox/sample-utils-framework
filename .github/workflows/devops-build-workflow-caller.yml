@@ -12,6 +12,6 @@ jobs:
   call-devops-build-workflow:
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-workflow.yml@main
     with:
-      repository: ${{ github.event.repository.name }}
+      repository: ${{ github.repository }}
     secrets:
       token: ${{ secrets.GHE_DEVOPS_TOKEN}}
