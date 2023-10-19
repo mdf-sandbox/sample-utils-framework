@@ -16,7 +16,6 @@ jobs:
       repository: ${{ github.repository }}
     secrets:
       token: ${{ secrets.GHE_DEVOPS_TOKEN }}
-
     permissions:
       actions: read
       contents: read
