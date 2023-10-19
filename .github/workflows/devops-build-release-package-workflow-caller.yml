@@ -10,9 +10,9 @@ on:
 
 jobs:
   call-devops-workflow:
-    if:  startsWith(github.head_ref, 'releases/')
     name: Call DevOps Workflow
     uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-release-package-workflow.yml@main
     with:
       repository: ${{ github.repository }}
+      head_ref: ${{ github.head_ref }}
     secrets: inherit
