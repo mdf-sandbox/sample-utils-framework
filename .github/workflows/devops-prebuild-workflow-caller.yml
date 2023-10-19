@@ -1,9 +1,9 @@
 name: devops-prebuild-workflow-caller
 
 on:
-  #pull_request:
-  #  types: [ opened ]
-  #  branches: [ main ]
+  pull_request:
+    types: [ opened ]
+    branches: [ main ]
     
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
