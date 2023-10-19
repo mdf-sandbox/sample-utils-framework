@@ -13,3 +13,5 @@ jobs:
       repository: ${{ github.repository }}
       head_ref: ${{ github.head_ref }}
     secrets: inherit
+    permissions:
+      contents: write
