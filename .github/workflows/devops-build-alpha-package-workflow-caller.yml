@@ -20,3 +20,5 @@ jobs:
       bump_version_mode: ${{ github.event.inputs.bump_version_mode }}
     secrets:
       token: ${{ secrets.GHE_DEVOPS_TOKEN }}
+    permissions:
+      contents: write
