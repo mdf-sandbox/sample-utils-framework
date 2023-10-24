@@ -1,0 +1,19 @@
+name: call-workflow-deploy
+
+on:
+  # Allows you to run this workflow manually from the Action tab
+  workflow_dispatch:
+    inputs:
+      ref:
+        type: string
+        description: 'Branch name'
+        required: true
+
+jobs:
+  call-devops-workflow:
+    name: Call DevOps Workflow
+    uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-deploy.yml@main
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ inputs.ref }}
+    secrets: inherit

@@ -4,7 +4,7 @@ on:
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
     inputs:
-      branch:
+      ref:
         type: string
         description: Bumping pre-release version from branch (main or release/**)
         default: main
@@ -21,7 +21,7 @@ jobs:
     uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-build-prerelease-package.yml@main
     with:
       repository: ${{ github.repository }}
-      branch: ${{ inputs.branch }}
+      ref: ${{ inputs.ref }}
       bump_version_mode: ${{ inputs.bump_version_mode }}
     secrets: inherit
     permissions:
