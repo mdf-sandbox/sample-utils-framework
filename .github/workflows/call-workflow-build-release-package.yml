@@ -8,6 +8,7 @@ on:
 jobs:
   call-devops-workflow:
     name: Call DevOps Workflow
+    if: ${{ github.event.pull_request.merged==true }}
     uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-build-release-package.yml@main
     with:
       repository: ${{ github.repository }}
