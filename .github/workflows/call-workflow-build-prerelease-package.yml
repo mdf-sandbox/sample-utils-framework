@@ -1,16 +1,16 @@
-name: devops-build-alpha-package-workflow-caller
+name: call-workflow-build-prerelease-package
 
 on:
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
     inputs:
-      branch: 
+      branch:
         type: string
-        description: Bumping version from branch (main or release/**)
+        description: Bumping pre-release version from branch (main or release/**)
         default: main
-      bump_version_mode: 
+      bump_version_mode:
         type: choice
-        description: Bumping version to
+        description: Bumping pre-release version to
         options:
         - premajor
         - preminor
@@ -18,7 +18,7 @@ on:
 jobs:
   call-devops-workflow:
     name: Call DevOps Workflow
-    uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-alpha-package-workflow.yml@main
+    uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-build-prerelease-package.yml@main
     with:
       repository: ${{ github.repository }}
       branch: ${{ inputs.branch }}

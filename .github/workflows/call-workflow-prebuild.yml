@@ -1,17 +1,17 @@
-name: devops-prebuild-workflow-caller
+name: call-workflow-prebuild
 
 on:
   pull_request:
     types: [ opened ]
     branches: [ main ]
-    
+
   # Allows you to run this workflow manually from the Action tab
   workflow_dispatch:
 
 jobs:
   call-devops-workflow:
     name: Call DevOps Workflow
-    uses: mdf-sandbox/sample-devops/.github/workflows/devops-prebuild-workflow.yml@main
+    uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-prebuild.yml@main
     with:
       repository: ${{ github.repository }}
       head_ref: ${{ github.head_ref }}

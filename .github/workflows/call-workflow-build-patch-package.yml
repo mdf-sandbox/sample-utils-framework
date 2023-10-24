@@ -1,4 +1,4 @@
-name: devops-build-patch-package-workflow-caller
+name: call-workflow-build-patch-package
 
 on:
   # Allows you to run this workflow manually from the Action tab
@@ -7,7 +7,7 @@ on:
 jobs:
   call-devops-workflow:
     name: Call DevOps Workflow
-    uses: mdf-sandbox/sample-devops/.github/workflows/reusable_workflows/devops-build-patch-package-workflow.yml@main
+    uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-build-patch-package.yml@main
     with:
       repository: ${{ github.repository }}
     secrets: inherit

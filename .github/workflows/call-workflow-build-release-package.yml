@@ -1,4 +1,4 @@
-name: devops-build-release-package-workflow-caller
+name: call-workflow-build-release-package
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 jobs:
   call-devops-workflow:
     name: Call DevOps Workflow
-    uses: mdf-sandbox/sample-devops/.github/workflows/devops-build-release-package-workflow.yml@main
+    uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-build-release-package.yml@main
     with:
       repository: ${{ github.repository }}
       head_ref: ${{ github.head_ref }}
