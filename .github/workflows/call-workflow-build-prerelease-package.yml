@@ -12,8 +12,8 @@ on:
         type: choice
         description: Bumping pre-release version to
         options:
-        - premajor
-        - preminor
+         - premajor
+         - preminor
 
 jobs:
   call-devops-workflow:
