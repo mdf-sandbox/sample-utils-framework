@@ -13,7 +13,7 @@ custom:
     spark_env_vars:
         TZ: "Etc/GMT-7"
         ENVIRONMENT: {{ env['ENVIRONMENT'] }}
-        PIP_EXTRA_INDEX_URL: https://__token__:{{ env['ENVIRONMENT'] }}@{{ env['ARTIFACT_URL'] }}
+        PIP_EXTRA_INDEX_URL: https://__token__:{{ env['ARTIFACT_TOKEN_SECRET_NAME'] }}@{{ env['ARTIFACT_URL'] }}
     # init_scripts:
     #   - dbfs:
     #       destination: "dbfs:/{{ env['REPO_DIR'] }}/set_private_pip_repositories.sh"
