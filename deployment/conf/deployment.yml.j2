@@ -100,5 +100,5 @@ environments:
             <<: *etl-task-settings
             job_cluster_key: basic_static_job_cluster
             notebook_task:
-              notebook_path: "{{ env['APPROVAL_GATE_PATH'] }}/test_script"
+              notebook_path: "{{ env['SCRIPTS_PATH'] }}/check_pip"
               source: WORKSPACE
