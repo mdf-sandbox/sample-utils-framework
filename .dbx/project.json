@@ -1,0 +1,39 @@
+{
+    "environments": {
+        "DEV": {
+            "profile": "ar-frmwk",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/dbx/sample-utils-framework",
+                "artifact_location": "dbfs:/FileStore/dbx/sample-utils-framework"
+            }
+        },
+        "SIT": {
+            "profile": "ar-frmwk",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/dbx/sample-utils-framework",
+                "artifact_location": "dbfs:/FileStore/dbx/sample-utils-framework"
+            }
+        },
+        "UAT": {
+            "profile": "ar-frmwk",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/dbx/sample-utils-framework",
+                "artifact_location": "dbfs:/FileStore/dbx/sample-utils-framework"
+            }
+        },
+        "PRD": {
+            "profile": "ar-frmwk",
+            "storage_type": "mlflow",
+            "properties": {
+                "workspace_directory": "/Shared/dbx/sample-utils-framework",
+                "artifact_location": "dbfs:/FileStore/dbx/sample-utils-framework"
+            }
+        }
+    },
+    "inplace_jinja_support": true,
+    "failsafe_cluster_reuse_with_assets": false,
+    "context_based_upload_for_execute": false
+}
