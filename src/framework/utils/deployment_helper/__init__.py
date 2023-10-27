@@ -1,2 +1,2 @@
 """deployment_helper utility package"""
-__version__ = "2.1.0"  # will be overwritten by poetry_bumpversion
+__version__ = "3.0.0a0"  # will be overwritten by poetry_bumpversion
