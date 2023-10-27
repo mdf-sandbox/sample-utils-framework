@@ -78,7 +78,7 @@ pythonpath = ["src"]
 [tool.flakeheaven]
 max-line-length = 90
 max-complexity = 18
-exclude = ["README.md", "experiments/*", "docs/*", "conf/*", "setup/*"]
+exclude = ["README.md", "experiments/*", "docs/*", "conf/*", "setup/*", "deployment/*"]
 # https://github.com/flakehell/flakehell/issues/10#issuecomment-822720074
 extended_default_ignore = []
 
@@ -110,7 +110,6 @@ pyflakes = [
     "-W503",
     "-F403",
     "-F401",
-    "-F821",
 ]
 
 [tool.mypy] # only run on src
