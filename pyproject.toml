@@ -64,7 +64,7 @@ sections = [
 import_heading_stdlib = "import: standard" # a module as part of Python's standard library.
 import_heading_pyspark = "import: pyspark"
 import_heading_firstparty = "import: internal" # a module as being part of the current python project.
-import_heading_future = "import: future" # a module as part of Python's internal future compatibility libraries. 
+import_heading_future = "import: future" # a module as part of Python's internal future compatibility libraries.
 import_heading_thirdparty = "import: external" # a module as being part of a third party library.
 import_heading_localfolder = "import: private/local" # a module as being a local folder. Generally, this is reserved for relative imports (from . import module).
 force_single_line = "true"
@@ -110,6 +110,7 @@ pyflakes = [
     "-W503",
     "-F403",
     "-F401",
+    "-F821",
 ]
 
 [tool.mypy] # only run on src
