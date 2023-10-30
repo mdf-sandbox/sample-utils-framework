@@ -15,7 +15,6 @@ custom:
         ENVIRONMENT: {{ env['ENVIRONMENT'] }}
         ARTIFACT_TOKEN_SECRET_NAME: "{{ env['ARTIFACT_TOKEN_SECRET_NAME'] }}"
         PIP_EXTRA_INDEX_URL: "https://__token__:${ARTIFACT_TOKEN_SECRET_NAME}@{{ env['ARTIFACT_URL'] }}"
-        #PIP_EXTRA_INDEX_URL: https://__token__:{{ env['ARTIFACT_TOKEN_SECRET_NAME'] }}@{{ env['ARTIFACT_URL'] }}
     # init_scripts:
     #   - dbfs:
     #       destination: "dbfs:/{{ env['REPO_DIR'] }}/set_private_pip_repositories.sh"
