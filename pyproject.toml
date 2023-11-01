@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "sample-utils-framework"
-version = "3.14.0a0"
+version = "3.14.0"
 description = "common lib for deployment-related"
 authors = []
 readme = "README.md"
