@@ -7,11 +7,11 @@ SPARK_CONF:
 # databricks files location config
 FILES_LOCATION_CONF:
   workspace:
-    scripts: "/scripts" #default
+    scripts: "scripts" #default
   dbfs:
-    scripts: "/scripts" #default
-    job_configs: "/job_configs"
-    specification_mappings: "/specification_mappings"
+    scripts: "scripts" #default
+    job_configs: "job_configs"
+    specification_mappings: "specification_mappings"
 
 
 
