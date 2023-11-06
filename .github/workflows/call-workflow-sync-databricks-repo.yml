@@ -2,7 +2,7 @@ name: call-workflow-sync-databricks-repo
 
 on:
   push:
-    branches: [ feature/** ]
+    branches: [ 'feature/**' ]
 
 jobs:
   call-devops-workflow:
@@ -10,5 +10,6 @@ jobs:
     uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-sync-databricks-repo.yml@main
     with:
       repository: ${{ github.repository }}
-      ref: ${{ github.head_ref }}
+      ref: ${{ github.ref }}
+      ref2: ${{ github.ref.name }}
     secrets: inherit
