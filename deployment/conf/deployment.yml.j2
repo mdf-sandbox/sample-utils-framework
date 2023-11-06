@@ -78,7 +78,7 @@ custom:
           package: "{{ env['PACKAGE_NAME'] }}=={{ env['CURRENT_VERSION'] }}"
 
 environments:
-  {{ env['ENVIRONMENT'] }}:
+  default:
     workflows:
       - name: {{ env['DEFAULT_WORKFLOW_NAME'] }}
         <<: *workflows-settings
