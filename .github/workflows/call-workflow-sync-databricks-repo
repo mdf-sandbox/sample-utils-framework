@@ -1,0 +1,17 @@
+name: call-workflow-sync-databricks-repo
+
+on:
+  push:
+    branches: [ feature/** ]
+
+  # Allows you to run this workflow manually from the Action tab
+  workflow_dispatch:
+
+jobs:
+  call-devops-workflow:
+    name: Call DevOps Workflow
+    uses: mdf-sandbox/sample-devops/.github/workflows/reusable-workflow-sync-databricks-repo.yml@main
+    with:
+      repository: ${{ github.repository }}
+      ref: ${{ github.head_ref }}
+    secrets: inherit
