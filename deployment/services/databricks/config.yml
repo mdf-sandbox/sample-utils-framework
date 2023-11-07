@@ -1,9 +1,3 @@
-# spark config
-SPARK_CONF:
-  spark.databricks.pyspark.enableProcessIsolation: false
-  spark.databricks.pyspark.enablePy4JSecurity: false
-  spark.databricks.repl.allowedLanguages: sql,python,r
-
 # databricks files location config
 FILES_LOCATION_CONF:
   workspace:
